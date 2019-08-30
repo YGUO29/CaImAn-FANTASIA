@@ -4,7 +4,7 @@ gcp;                            % start cluster
 addpath(genpath('utilities'));
 addpath(genpath('deconvolution'));
   
-nam = 'D:\=data=\80Z_imaging\img_2p\M80Z_180419\20180419T164452_registered.tif';          % insert path to tiff stack here
+nam = 'D:\=data=\80Z_imaging\img_2p\M80Z_180905\registered\20180905T153247.tif';          % insert path to tiff stack here
 sframe=11;						% user input: first frame to read (optional, default 1)
 num2read=[];					% user input: how many frames to read   (optional, default until the end)
 Y = read_file(nam,sframe,num2read);

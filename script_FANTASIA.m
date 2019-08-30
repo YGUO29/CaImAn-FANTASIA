@@ -1,10 +1,10 @@
-clear;
+clear all;
 %% load file
 gcp;                            % start cluster
 addpath(genpath('utilities'));
 addpath(genpath('deconvolution'));
   
-nam = 'D:\=data=\80Z_imaging\img_2p\M80Z_180625\registered_fiji\20180625T112517_registered.tif';          % insert path to tiff stack here
+nam = 'D:\=data=\80Z_imaging\img_2p\M80Z_180905\registered\20180905T160342.tif';          % insert path to tiff stack here
 sframe=11;						% user input: first frame to read (optional, default 1)
 num2read=[];					% user input: how many frames to read   (optional, default until the end)
 Y = read_file(nam,sframe,num2read);
@@ -51,10 +51,10 @@ figure;imagesc(Cn);
 
 
     %% manually refine components (optional)
-refine_components = true;  % flag for manual refinement
-if refine_components
-    [Ain,Cin,center] = manually_refine_components(Y,Ain,Cin,center,Cn,tau,options);
-end
+% refine_components = true;  % flag for manual refinement
+% if refine_components
+%     [Ain,Cin,center] = manually_refine_components(Y,Ain,Cin,center,Cn,tau,options);
+% end
     
 %% update spatial components
 Yr = reshape(Y,d,T);
